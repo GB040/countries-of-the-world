@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Container } from './Container';
 
-const Wraper = styled.main`
+const Wrapper = styled.main`
   padding: 2rem 0;
 
   @media (min-width: 767px) {
@@ -10,8 +10,8 @@ const Wraper = styled.main`
 
 export const Main = ({ children }) => {
   return (
-    <Wraper>
+    <Wrapper>
       <Container>{children}</Container>
-    </Wraper>    
+    </Wrapper>    
   )
 }
