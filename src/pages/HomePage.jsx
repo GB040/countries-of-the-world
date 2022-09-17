@@ -7,8 +7,8 @@ import { Card } from '../components/Card';
 import { Controls } from '../components/Controls';
 import { ALL_COUNTRIES } from '../config';
 
-export const HomePage = ({countries, setCountries}) => {
-  const [filtredCountries, setFiltredCountries] = useState([]);
+export const HomePage = ({ setCountries, countries }) => {
+  const [filtredCountries, setFiltredCountries] = useState(countries);
 
   const { push } = useHistory();
 
@@ -16,11 +16,11 @@ export const HomePage = ({countries, setCountries}) => {
     let data = [...countries];
 
     if (region) {
-      data = data.filter(c => c.region.includes(region));
+      data = data.filter((c) => c.region.includes(region));
     }
 
     if (search) {
-      data = data.filter(c => c.name.toLowerCase().includes(search.toLowerCase()));
+      data = data.filter((c) => c.name.toLowerCase().includes(search.toLowerCase()));
     }
 
     setFiltredCountries(data);
@@ -30,7 +30,13 @@ export const HomePage = ({countries, setCountries}) => {
     if (!countries.length)
       axios.get(ALL_COUNTRIES)
         .then(({ data }) => setCountries(data));
+    // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    handleSearch();
+    // eslint-disable-next-line
+  }, [countries]);
 
   return (
     <>
