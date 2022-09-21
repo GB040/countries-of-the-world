@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/countries-of-the-world/static/css/main.6457af19.css",
-    "main.js": "/countries-of-the-world/static/js/main.5224e3a6.js",
+    "main.js": "/countries-of-the-world/static/js/main.2eab2865.js",
     "index.html": "/countries-of-the-world/index.html",
     "main.6457af19.css.map": "/countries-of-the-world/static/css/main.6457af19.css.map",
-    "main.5224e3a6.js.map": "/countries-of-the-world/static/js/main.5224e3a6.js.map"
+    "main.2eab2865.js.map": "/countries-of-the-world/static/js/main.2eab2865.js.map"
   },
   "entrypoints": [
     "static/css/main.6457af19.css",
-    "static/js/main.5224e3a6.js"
+    "static/js/main.2eab2865.js"
   ]
 }
